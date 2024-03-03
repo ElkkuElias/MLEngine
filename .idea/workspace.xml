@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ee1f72-c9ba-44de-a7da-c7253491b5c9" name="Changes" comment="frontend component for questionnaire">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DataProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DataProcessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FlaskServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/FlaskServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/ML.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TestFlaskApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/TestFlaskApi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TestModelCreation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/TestModelCreation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TestModelPrediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/TestModelPrediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/best_model4.pth" beforeDir="false" afterPath="$PROJECT_DIR$/backend/best_model4.pth" afterDir="false" />
+    <list default="true" id="e8ee1f72-c9ba-44de-a7da-c7253491b5c9" name="Changes" comment="some commenting">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,30 +40,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests in TestFlaskApi.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in TestModelCreation.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in TestModelPrediction.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in Tests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DataProcessing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FlaskServer (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.FlaskServer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ML.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hi.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;elias&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in TestFlaskApi.py.executor": "Run",
+    "Python tests.Python tests in TestModelCreation.py.executor": "Run",
+    "Python tests.Python tests in TestModelPrediction.py.executor": "Run",
+    "Python tests.Python tests in Tests.py.executor": "Run",
+    "Python.DataProcessing.executor": "Run",
+    "Python.FlaskServer (1).executor": "Run",
+    "Python.FlaskServer.executor": "Run",
+    "Python.ML.executor": "Run",
+    "Python.hi.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "elias",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine" />
@@ -156,6 +151,7 @@
       <workItem from="1708257626381" duration="2134000" />
       <workItem from="1709283236915" duration="639000" />
       <workItem from="1709468579374" duration="7048000" />
+      <workItem from="1709498823364" duration="37000" />
     </task>
     <task id="LOCAL−00001" summary="frontend component for questionnaire">
       <option name="closed" value="true" />
@@ -164,7 +160,14 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1709480692949</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="some commenting">
+      <option name="closed" value="true" />
+      <created>1709498851902</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1709498851903</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +175,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="frontend component for questionnaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="frontend component for questionnaire" />
+    <MESSAGE value="some commenting" />
+    <option name="LAST_COMMIT_MESSAGE" value="some commenting" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MLEngine$FlaskServer.coverage" NAME="FlaskServer Coverage Results" MODIFIED="1709494448072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
