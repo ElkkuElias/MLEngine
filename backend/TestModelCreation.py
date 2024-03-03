@@ -3,7 +3,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 import torch
 import numpy as np
 
-
+#Tests the model creation  and data processing
 class TestDataPreprocessing(unittest.TestCase):
     def test_scaler(self):
         data = np.array([[1, 2, 3], [4, 5, 6]])
