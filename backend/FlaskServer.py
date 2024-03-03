@@ -1,16 +1,16 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import torch
 from DataProcessing import QuestionnaireNN,scaler,le  # Replace with the name of your Python file containing the model class
 
 app = Flask(__name__)
-
+CORS(app)
 # Load your trained model
 model = QuestionnaireNN()
 model.load_state_dict(torch.load('best_model4.pth'))
 model.eval()
 
-# Assuming your scaler is loaded here
-# scaler = joblib.load('your_scaler.pkl')
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
