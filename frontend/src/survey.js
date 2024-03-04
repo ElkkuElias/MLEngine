@@ -4,14 +4,14 @@ import './button.css';
 const SurveyComponent = () => {
   // Questions array
   const questions = [
-    'I am fascinated by 3D animation and visualization',
+    'I am fascinated by 3D animation and visualization.',
     'I have a strong interest in vehicle technology and automotive engineering.',
     'I am keen on developing and working with assistive technology devices.',
-    'Chemistry and biotechnology capture my interest.',
+    'I am interested in Chemistry and biotechnology.',
     'Conducting laboratory tests and analyses excites me.',
     'I have a talent for digital design and enjoy using technology to create art.',
     'Electronics and circuit design are areas where I excel.',
-    'I am passionate about sustainability and environmental technology',
+    'I am passionate about sustainability and environmental technology.',
     'Emergency medical care and first response are careers I can see myself in.',
     'I am skilled in physical therapy and enjoy helping others improve their mobility.',
     'Working in the performing arts and theater technology is my dream.',
@@ -25,7 +25,7 @@ const SurveyComponent = () => {
     'A profession in the social services, helping communities and individuals, is important to me.',
     'Technology and engineering fields, especially those focused on electronics or automation, are where I want to be.',
     'I prefer hands-on learning experiences and practical applications over theoretical studies.',
-    'Participating in projects and teamwork is an essential part of my ideal learning environment',
+    'Participating in projects and teamwork is an essential part of my ideal learning environment.',
     'I value opportunities for internships and industry placements as part of my education.',
     'Distance learning and flexible study options are important to me.',
     'I am interested in pursuing studies that offer a blend of artistic creativity and technological innovation.'
