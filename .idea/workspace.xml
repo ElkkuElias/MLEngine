@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8ee1f72-c9ba-44de-a7da-c7253491b5c9" name="Changes" comment="some commenting">
+      <change afterPath="$PROJECT_DIR$/backend/Jenkinsfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/best_model4.pth" beforeDir="false" afterPath="$PROJECT_DIR$/backend/best_model4.pth" afterDir="false" />
     </list>
@@ -153,6 +155,8 @@
       <workItem from="1709468579374" duration="7048000" />
       <workItem from="1709498823364" duration="37000" />
       <workItem from="1709545651966" duration="340000" />
+      <workItem from="1709816265861" duration="128000" />
+      <workItem from="1709819644525" duration="918000" />
     </task>
     <task id="LOCAL−00001" summary="frontend component for questionnaire">
       <option name="closed" value="true" />
@@ -180,7 +184,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="some commenting" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MLEngine$FlaskServer.coverage" NAME="FlaskServer Coverage Results" MODIFIED="1709545672396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/MLEngine$FlaskServer.coverage" NAME="FlaskServer Coverage Results" MODIFIED="1709816362889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine$ML.coverage" NAME="ML Coverage Results" MODIFIED="1707844963466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MLEngine$hi.coverage" NAME="hi Coverage Results" MODIFIED="1707844312752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MLEngine$DataProcessing.coverage" NAME="DataProcessing Coverage Results" MODIFIED="1709468675306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
