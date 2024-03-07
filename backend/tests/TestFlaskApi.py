@@ -2,7 +2,9 @@ from flask import Flask, jsonify, request
 import unittest
 from unittest.mock import patch
 
-from FlaskServer import app , QuestionnaireNN, scaler, le
+from backend.FlaskServer import app
+
+
 
 
 class TestFlaskAPI(unittest.TestCase):

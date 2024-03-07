@@ -1,0 +1,7 @@
+Flask==3.0.2
+flask-cors==4.0.0
+pandas==2.2.1
+scikit-learn==1.4.1post1
+torch==2.2.1
+numpy==1.26.4
+xmlrunner==1.7.7
