@@ -3,7 +3,7 @@ import unittest
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 import torch
 import numpy as np
-from DataProcessing import QuestionnaireNN, scaler, le, y
+from backend.DataProcessing import QuestionnaireNN, y
 
 
 class TestModelPredictions(unittest.TestCase):

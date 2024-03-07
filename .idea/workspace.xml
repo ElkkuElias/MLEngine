@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8ee1f72-c9ba-44de-a7da-c7253491b5c9" name="Changes" comment="some commenting">
-      <change afterPath="$PROJECT_DIR$/backend/Jenkinsfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/testRunner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/FlaskServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/FlaskServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/TestFlaskApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tests/TestFlaskApi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/TestModelCreation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tests/TestModelCreation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/TestModelPrediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/tests/TestModelPrediction.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/best_model4.pth" beforeDir="false" afterPath="$PROJECT_DIR$/backend/best_model4.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,37 +48,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests in TestFlaskApi.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in TestModelCreation.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in TestModelPrediction.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in Tests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DataProcessing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FlaskServer (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.FlaskServer.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ML.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hi.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;elias&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in TestFlaskApi.py.executor": "Run",
+    "Python tests.Python tests in TestModelCreation.py.executor": "Run",
+    "Python tests.Python tests in TestModelPrediction.py.executor": "Run",
+    "Python tests.Python tests in Tests.py.executor": "Run",
+    "Python.DataProcessing.executor": "Run",
+    "Python.FlaskServer (1).executor": "Run",
+    "Python.FlaskServer.executor": "Run",
+    "Python.ML.executor": "Run",
+    "Python.hi.executor": "Run",
+    "Python.testRunner.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "elias",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine\backend" />
+      <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine\backend\tests" />
       <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.FlaskServer">
+  <component name="RunManager" selected="Python.testRunner">
     <configuration name="FlaskServer (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MLEngine" />
       <option name="ENV_FILES" value="" />
@@ -119,8 +128,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testRunner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MLEngine" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/testRunner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.testRunner" />
         <item itemvalue="Python.FlaskServer" />
         <item itemvalue="Python.FlaskServer (1)" />
       </list>
@@ -156,7 +189,7 @@
       <workItem from="1709498823364" duration="37000" />
       <workItem from="1709545651966" duration="340000" />
       <workItem from="1709816265861" duration="128000" />
-      <workItem from="1709819644525" duration="918000" />
+      <workItem from="1709819644525" duration="4122000" />
     </task>
     <task id="LOCAL−00001" summary="frontend component for questionnaire">
       <option name="closed" value="true" />
@@ -172,7 +205,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1709498851903</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="some commenting">
+      <option name="closed" value="true" />
+      <created>1709820698014</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1709820698014</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +224,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="some commenting" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MLEngine$FlaskServer.coverage" NAME="FlaskServer Coverage Results" MODIFIED="1709816362889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/MLEngine$testRunner.coverage" NAME="testRunner Coverage Results" MODIFIED="1709822329711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/MLEngine$FlaskServer.coverage" NAME="FlaskServer Coverage Results" MODIFIED="1709821629289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine$ML.coverage" NAME="ML Coverage Results" MODIFIED="1707844963466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MLEngine$hi.coverage" NAME="hi Coverage Results" MODIFIED="1707844312752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MLEngine$DataProcessing.coverage" NAME="DataProcessing Coverage Results" MODIFIED="1709468675306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
