@@ -14,7 +14,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-               git branch: 'main' url: 'https://github.com/ElkkuElias/MLEngine.git'
+               git branch: 'main', url: 'https://github.com/ElkkuElias/MLEngine.git'
             }
         }
         stage('Setup') {
