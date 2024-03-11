@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 import unittest
 from unittest.mock import patch
 
-from FlaskServer import app
+from ..FlaskServer import app
 
 
 
