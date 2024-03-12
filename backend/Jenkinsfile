@@ -39,8 +39,8 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
+       // stage('Build Docker Image') {
+          //  steps {
                 //dir('backend') {
                   //  script {
                         // Logging in to Docker Hub
@@ -52,7 +52,7 @@ pipeline {
                         //}
                     //}
                // }
-            }
+            //}
         }
     }
 
