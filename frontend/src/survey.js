@@ -47,6 +47,7 @@ const SurveyComponent = () => {
   const generateDataJSON = () => {
     const data = {
       data: answers,
+      userID:sessionStorage.getItem('userID')
     };
     console.log(data); 
     fetch('http://127.0.0.1:5000/predict', {  //based on ml model server
