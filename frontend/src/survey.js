@@ -1,56 +1,54 @@
 import React, { useState } from 'react';
 import './button.css';
+import i18n from 'i18next';
+import { useTranslation, initReactI18next } from 'react-i18next';
+
+import global_en from './translations/en/global.json';
+import global_su from './translations/su/global.json';
+import Dropdown from './components/dropdown.js';
+
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en : { global: global_en },
+      su : { global: global_su },
+    },
+    lng: 'su',
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false
+    }
+  });
 
 const SurveyComponent = () => {
-  // Questions array
-  const questions = [
-    'I am fascinated by 3D animation and visualization.',
-    'I have a strong interest in vehicle technology and automotive engineering.',
-    'I am keen on developing and working with assistive technology devices.',
-    'I am interested in Chemistry and biotechnology.',
-    'Conducting laboratory tests and analyses excites me.',
-    'I have a talent for digital design and enjoy using technology to create art.',
-    'Electronics and circuit design are areas where I excel.',
-    'I am passionate about sustainability and environmental technology.',
-    'Emergency medical care and first response are careers I can see myself in.',
-    'I am skilled in physical therapy and enjoy helping others improve their mobility.',
-    'Working in the performing arts and theater technology is my dream.',
-    'I see myself as a future professional in the field of gerontology, focusing on elderly care.',
-    'Information technology and software development are careers I aspire to.',
-    'I am interested in international business and logistics.',
-    'My goal is to work in the construction and architecture industry.',
-    'I prefer a career that allows me to be creative and innovative in my work.',
-    'Working in a lab and conducting experiments is where I see myself thriving.',
-    'I am inclined towards careers that involve direct patient care and health services.',
-    'A profession in the social services, helping communities and individuals, is important to me.',
-    'Technology and engineering fields, especially those focused on electronics or automation, are where I want to be.',
-    'I prefer hands-on learning experiences and practical applications over theoretical studies.',
-    'Participating in projects and teamwork is an essential part of my ideal learning environment.',
-    'I value opportunities for internships and industry placements as part of my education.',
-    'Distance learning and flexible study options are important to me.',
-    'I am interested in pursuing studies that offer a blend of artistic creativity and technological innovation.'
-  ];
+  const { t } = useTranslation('global'); // Specify the namespace
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
-  // State to hold answers, initialized with null for each question
+  const questions = Object.keys(global_en); // Extract question keys from global_en JSON
+
   const [answers, setAnswers] = useState(Array(questions.length).fill(null));
 
-  // Function to handle button click
   const handleAnswer = (questionIndex, answer) => {
     const newAnswers = [...answers];
     newAnswers[questionIndex] = answer;
     setAnswers(newAnswers);
   };
+
   const getButtonStyle = (questionIndex, answer) => {
-    return answers[questionIndex] === answer ? { backgroundColor: '#367B35' } : {}; // Darker green when selected
+    return answers[questionIndex] === answer ? { backgroundColor: '#367B35' } : {};
   };
-  // Function to generate the JSON data
+
   const generateDataJSON = () => {
     const data = {
       data: answers,
-      userID:sessionStorage.getItem('userID')
+      userID: sessionStorage.getItem('userID')
     };
-    console.log(data); 
-    fetch('http://127.0.0.1:5000/predict', {  //based on ml model server
+    console.log(data);
+    fetch('http://127.0.0.1:5000/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -68,12 +66,13 @@ const SurveyComponent = () => {
 
   return (
     <div>
+           <Dropdown onLanguageSelect={changeLanguage} />
       {questions.map((question, index) => (
         <div key={index}>
-          <p>{question}</p>
+          <p>{t(`global:${question}`)}</p> {/* Translate each question key */}
           <div>
             {[1, 2, 3, 4, 5].map((answer) => (
-              <button key={answer} onClick={() => handleAnswer(index, answer)} style={getButtonStyle(index,answer)}>
+              <button key={answer} onClick={() => handleAnswer(index, answer)} style={getButtonStyle(index, answer)}>
                 {answer}
               </button>
             ))}
