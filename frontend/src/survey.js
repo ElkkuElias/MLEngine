@@ -5,6 +5,7 @@ import { useTranslation, initReactI18next } from 'react-i18next';
 
 import global_en from './translations/en/global.json';
 import global_su from './translations/su/global.json';
+import global_tel from './translations/tel/global.json';
 import Dropdown from './components/dropdown.js';
 
 
@@ -14,6 +15,7 @@ i18n
     resources: {
       en : { global: global_en },
       su : { global: global_su },
+      tel : { global: global_tel }
     },
     lng: 'su',
     fallbackLng: 'en',
@@ -24,9 +26,12 @@ i18n
 
 const SurveyComponent = () => {
   const { t } = useTranslation('global'); // Specify the namespace
+  const [selectedLanguage, setSelectedLanguage] = useState('su');
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    setSelectedLanguage(lng);
   };
+  
 
   const questions = Object.keys(global_en); // Extract question keys from global_en JSON
 
@@ -41,11 +46,15 @@ const SurveyComponent = () => {
   const getButtonStyle = (questionIndex, answer) => {
     return answers[questionIndex] === answer ? { backgroundColor: '#367B35' } : {};
   };
+  const getFontSize = () => {
+    return selectedLanguage === 'tel' ? '0.8em' : '1em';
+  };
 
   const generateDataJSON = () => {
     const data = {
       data: answers,
-      userID: sessionStorage.getItem('userID')
+      userID: sessionStorage.getItem('userID'),
+      lang: selectedLanguage
     };
     console.log(data);
     fetch('http://127.0.0.1:5000/predict', {
@@ -65,7 +74,7 @@ const SurveyComponent = () => {
   };
 
   return (
-    <div>
+    <div style={{ fontSize: getFontSize() }}>
            <Dropdown onLanguageSelect={changeLanguage} />
       {questions.map((question, index) => (
         <div key={index}>

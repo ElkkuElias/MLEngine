@@ -7,6 +7,7 @@ from flask_cors import CORS
 from sqlalchemy import String
 from dotenv import load_dotenv
 import os
+from translations import translations
 
 load_dotenv()
 
@@ -25,6 +26,21 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize SQLAlchemy
 db = SQLAlchemy(app)
+def translate(term, lang_code='en'):
+    """
+    Translate a given term to the specified language.
+
+    Parameters:
+    - term (str): The term to translate.
+    - lang_code (str): The language code for the translation (default: 'en' for English).
+
+    Returns:
+    - str: The translated term, or a message indicating the term or language code is not found.
+    """
+    if term in translations and lang_code in translations[term]:
+        return translations[term][lang_code]
+    else:
+        return f"Translation for '{term}' in language '{lang_code}' not found."
 
 # Define database models
 class User(db.Model):
@@ -94,7 +110,12 @@ def register_user():
 def predict():
     # Parses JSON data from the request body
     data = request.json.get('data', [])
-
+    lang_code = request.json.get('lang', 'en')
+    translationstext = {
+        'en': {'prediction_text': 'Your predicted class is: {}'},
+        'su': {'prediction_text': 'Ennustettu tutkintosi on: {}'},
+        'tel': {'prediction_text': 'మీరు అంచనా వేసిన తరగతి: {}'}
+    }
     # Preprocesses the input data
     input_data_scaled = scaler.transform([data])  # Scales the input data
     input_data_tensor = torch.tensor(input_data_scaled, dtype=torch.float32)  # Converts to tensor
@@ -103,30 +124,32 @@ def predict():
     with torch.no_grad():
         output = model(input_data_tensor)
     _, predicted_class = torch.max(output.data, 1)
+    translation_template = translationstext.get(lang_code, translationstext['en'])['prediction_text']
 
     # Converts predicted class index to label
     predicted_class_name = le.inverse_transform([predicted_class.item()])
+    response_text = translation_template.format(translate(predicted_class_name[0],lang_code))
 
-    user_data = request.get_json()
+   # user_data = request.get_json()
     #Parse json data from req body
-    new_Answers = AnswerSheet( #Inserts values data=answers and userid into table answerSheet
-        answers=str(user_data['data']), #questionaire answers
-        userID=user_data['userID']#UserID
-    )
-    new_Degree = Degree(
+    #new_Answers = AnswerSheet( #Inserts values data=answers and userid into table answerSheet
+     #   answers=str(user_data['data']), #questionaire answers
+      #  userID=user_data['userID']#UserID
+    #)
+   # new_Degree = Degree(
         #enters into table Degree userID and the degree they got from the questionnaire
-        userID=user_data['userID'],
-        name=[predicted_class_name]
-    )
+    #    userID=user_data['userID'],
+     #   name=[predicted_class_name]
+    #)
 
-    db.session.add(new_Answers)
-    db.session.commit()
+    #db.session.add(new_Answers)
+    #db.session.commit()
 
-    db.session.add(new_Degree)
-    db.session.commit()
+    #db.session.add(new_Degree)
+    #db.session.commit()
 
     # Returns the prediction
-    return jsonify({'predicted_class': predicted_class_name[0]})
+    return jsonify({'response': response_text})
 @app.route('/save',methods=['POST'])
 def save():
     user_data = request.get_json()
