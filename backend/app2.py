@@ -14,7 +14,7 @@ load_dotenv()
 from backend.DataProcessing import QuestionnaireNN, scaler, le
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "http://localhost:3001"}})
 # Configure SQLite database URI (replace 'sqlite:///test.db' with your MariaDB URI)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 
@@ -45,11 +45,15 @@ def translate(term, lang_code='en'):
 # Define database models
 class User(db.Model):
     __tablename__ = 'User'
-    firstName = db.Column(db.Integer, primary_key=True)
-    lastName = db.Column(db.Integer, primary_key=True)
     userID = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    password = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.Integer, unique=True, nullable=False)
+    firstName_en = db.Column(db.String(50), nullable=True)
+    lastName_en = db.Column(db.String(50), nullable=True)
+    firstName_su = db.Column(db.String(50), nullable=True)
+    lastName_su = db.Column(db.String(50), nullable=True)
+    firstName_tel = db.Column(db.String(200), nullable=True)
+    lastName_tel = db.Column(db.String(200), nullable=True)
+    email = db.Column(db.String(200), unique=True, nullable=False)
+    password = db.Column(db.String(50), nullable=False)
 
 class Degree(db.Model):
     __tablename__ = 'Degree'
@@ -94,12 +98,32 @@ def register_user():
     # Extract user data from request body
     user_data = request.get_json()
     # Create a new User instance
-    new_user = User(
-        firstName=user_data['firstName'],
-        lastName=user_data['lastName'],
-        email=user_data['email'],
-        password=user_data['password']
-    )
+    suffix = user_data['suffix']
+
+    if (suffix == 'su'):
+        new_user = User(
+            firstName_su=user_data['firstName_su'],
+            lastName_su=user_data['lastName_su'],
+            email=user_data['email'],
+            password=user_data['password'],
+
+        )
+    elif (suffix == 'tel'):
+        new_user = User(
+            firstName_tel=user_data['firstName_tel'],
+            lastName_tel=user_data['lastName_tel'],
+            email=user_data['email'],
+            password=user_data['password'],
+
+        )
+    else:
+        new_user = User(
+            firstName_en=user_data['firstName_en'],
+            lastName_en=user_data['lastName_en'],
+            email=user_data['email'],
+            password=user_data['password'],
+
+        )
 
     # Add the new user to the database
     db.session.add(new_user)
@@ -130,23 +154,23 @@ def predict():
     predicted_class_name = le.inverse_transform([predicted_class.item()])
     response_text = translation_template.format(translate(predicted_class_name[0],lang_code))
 
-   # user_data = request.get_json()
+    user_data = request.get_json()
     #Parse json data from req body
-    #new_Answers = AnswerSheet( #Inserts values data=answers and userid into table answerSheet
-     #   answers=str(user_data['data']), #questionaire answers
-      #  userID=user_data['userID']#UserID
-    #)
-   # new_Degree = Degree(
-        #enters into table Degree userID and the degree they got from the questionnaire
-    #    userID=user_data['userID'],
-     #   name=[predicted_class_name]
-    #)
+    new_Answers = AnswerSheet( #Inserts values data=answers and userid into table answerSheet
+        answers=str(user_data['data']), #questionaire answers
+        userID=user_data['userID']#UserID
+    )
+    new_Degree = Degree(
+       # enters into table Degree userID and the degree they got from the questionnaire
+        userID=user_data['userID'],
+       name=[predicted_class_name]
+    )
 
-    #db.session.add(new_Answers)
-    #db.session.commit()
+    db.session.add(new_Answers)
+    db.session.commit()
 
-    #db.session.add(new_Degree)
-    #db.session.commit()
+    db.session.add(new_Degree)
+    db.session.commit()
 
     # Returns the prediction
     return jsonify({'response': response_text})

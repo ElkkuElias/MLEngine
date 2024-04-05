@@ -1,23 +1,59 @@
-import React, { useState } from 'react';
 
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import i18n from 'i18next';
+import { useTranslation, initReactI18next } from 'react-i18next';
+
+import global_en from '../translations/en/global.json';
+import global_su from '../translations/su/global.json';
+import global_tel from '../translations/tel/global.json';
+import Dropdown from './dropdown';
+i18n
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en : { global: global_en },
+      su : { global: global_su },
+      tel : { global: global_tel }
+    },
+    lng: 'en',
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false
+    }
+  });
 
 const RegistrationForm = () => {
-  // State variables for form fields
+  const { t } = useTranslation('global'); // Specify the namespace
+  const [selectedLanguage, setSelectedLanguage] = useState('su');
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setSelectedLanguage(lng);
+    localStorage.setItem('selectedLanguage', lng);
+  };
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
+  let navigate = useNavigate();
+  const handleLogin = (event) => {
+    navigate('/login');
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
+    
+    const suffix = `${selectedLanguage}`
     const userData = {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password
+      [`firstName_${suffix}`]: firstName, 
+      [`lastName_${suffix}`]: lastName,
+      email,
+      password,
+      suffix
     };
-  
+
+    console.log(userData)
     fetch('http://127.0.0.1:5000/register', {
       method: 'POST',
       headers: {
@@ -28,20 +64,21 @@ const RegistrationForm = () => {
     .then(response => response.json())
     .then(data => {
         sessionStorage.setItem('userID', data.userID);
-        console.log(data);
+        navigate('/survey'); // Navigate after successful registration
     })
     .catch((error) => {
       console.error('Error:', error);
     });
-    
   };
 
   return (
+    
     <div>
-      <h2>Registration Form</h2>
+      <Dropdown onLanguageSelect={changeLanguage}/>
+      <h2>{t('Registration')}</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>First Name:</label>
+          <label>{t('First Name')}:</label>
           <input
             type="text"
             value={firstName}
@@ -49,7 +86,7 @@ const RegistrationForm = () => {
           />
         </div>
         <div>
-          <label>Last Name:</label>
+          <label>{t('Last Name')}:</label>
           <input
             type="text"
             value={lastName}
@@ -57,7 +94,7 @@ const RegistrationForm = () => {
           />
         </div>
         <div>
-          <label>Email:</label>
+          <label>{t('Email')}:</label>
           <input
             type="email"
             value={email}
@@ -65,15 +102,17 @@ const RegistrationForm = () => {
           />
         </div>
         <div>
-          <label>Password:</label>
+          <label>{t('Password')}:</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-        </div>
-        <button type="submit" onClick={handleSubmit}>Register</button>
+          </div>
+        <button type="submit">{t('Register')}</button>
+        
       </form>
+      <button onClick={handleLogin}>{t('Login')}</button>
     </div>
   );
 };

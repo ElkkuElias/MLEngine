@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './button.css';
 import i18n from 'i18next';
 import { useTranslation, initReactI18next } from 'react-i18next';
@@ -17,7 +17,7 @@ i18n
       su : { global: global_su },
       tel : { global: global_tel }
     },
-    lng: 'su',
+    lng: 'en',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false
@@ -26,10 +26,14 @@ i18n
 
 const SurveyComponent = () => {
   const { t } = useTranslation('global'); // Specify the namespace
-  const [selectedLanguage, setSelectedLanguage] = useState('su');
+  const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem('selectedLanguage') || 'en');
+  useEffect(() => {
+    i18n.changeLanguage(selectedLanguage);
+  }, [selectedLanguage]);
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setSelectedLanguage(lng);
+    localStorage.setItem('selectedLanguage', lng); // Update localStorage with the new language
   };
   
 
@@ -88,7 +92,7 @@ const SurveyComponent = () => {
           </div>
         </div>
       ))}
-      <button onClick={generateDataJSON}>Submit Answers</button>
+      <button onClick={generateDataJSON}>{t(`Submit answers`)}</button>
     </div>
   );
 };

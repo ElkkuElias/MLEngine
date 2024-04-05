@@ -1,5 +1,12 @@
 
-{
+{"Submit answers": "Lähetä vastaukset",
+  "Login": "Kirjaudu",
+  "Registration": "Rekisteröinti",
+  "First Name": "Etunimi",
+  "Last Name": "Sukunimi",
+  "Email": "Sähköposti",
+  "Password": "Salasana",
+  "Register": "Rekisteröidy",
   "Q1": "Olen kiinnostunut 3D-animaatiosta ja visualisoinnista.",
   "Q2": "Minulla on vahva kiinnostus ajoneuvotekniikkaan ja autotekniikkaan.",
   "Q3": "Olen innokas kehittämään ja työskentelemään apuvälineteknologioiden parissa.",
@@ -26,3 +33,4 @@
   "Q24": "Etäopiskelu ja joustavat opiskelumahdollisuudet ovat minulle tärkeitä.",
   "Q25": "Olen kiinnostunut opinnoista, jotka yhdistävät taiteellista luovuutta ja teknologista innovaatiota."
 }
+
