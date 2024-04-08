@@ -11,7 +11,7 @@ from translations import translations
 
 load_dotenv()
 
-from backend.DataProcessing import QuestionnaireNN, scaler, le
+from DataProcessing import QuestionnaireNN, scaler, le
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
