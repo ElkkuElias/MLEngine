@@ -14,7 +14,7 @@ load_dotenv()
 from backend.DataProcessing import QuestionnaireNN, scaler, le
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3001"}})
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 # Configure SQLite database URI (replace 'sqlite:///test.db' with your MariaDB URI)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 
@@ -27,16 +27,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Initialize SQLAlchemy
 db = SQLAlchemy(app)
 def translate(term, lang_code='en'):
-    """
-    Translate a given term to the specified language.
 
-    Parameters:
-    - term (str): The term to translate.
-    - lang_code (str): The language code for the translation (default: 'en' for English).
-
-    Returns:
-    - str: The translated term, or a message indicating the term or language code is not found.
-    """
     if term in translations and lang_code in translations[term]:
         return translations[term][lang_code]
     else:
