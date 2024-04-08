@@ -17,7 +17,7 @@ def create_connection(host_name, user_name, user_password, db_name):
     return connection
 
 # Replace with your actual details
-connection = create_connection("localhost", "root", "bakamoto", "project")
+connection = create_connection("localhost", "root", "yagami", "sep_amir")
 
 
 
