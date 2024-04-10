@@ -12,12 +12,12 @@ from sklearn.preprocessing import StandardScaler
 
 # Loads the dataset
 df = pd.read_csv('questionnaire.csv')
-print(df.columns)
+
 scaler = StandardScaler()
 # Separates features and labels
 X = df.drop('RecommendedStudyPath', axis=1).values.astype(float)
 y = LabelEncoder().fit_transform(df['RecommendedStudyPath'])
-print(y)
+
 
 
 # Splits the data into training, validation, and test sets
@@ -103,7 +103,7 @@ for epoch in range(num_epochs):
         torch.save(model.state_dict(), 'best_model4.pth')
 
 
-    print(f'Epoch {epoch+1}/{num_epochs}, Loss: {loss.item()}, Val Accuracy: {val_accuracy:.2f}%')
+
 # Assumes input_data is your data
 input_data = [5,2,1,2,1,5,2,2,1,2,3,2,3,2,5,5,2,1,2,4,1,1,1,2,5]
 
@@ -126,6 +126,5 @@ _, predicted_class = torch.max(output.data, 1)
 le = LabelEncoder()
 le.fit(df['RecommendedStudyPath'])
 
-# Gets the predicted class name
-predicted_class_name = le.inverse_transform([predicted_class.item()])
-print(f'The predicted class is: {predicted_class_name[0]}')
+
+print("Ready to Predict!")
