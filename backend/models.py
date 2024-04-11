@@ -22,6 +22,6 @@ class Degree(db.Model):
 
 class AnswerSheet(db.Model):
     __tablename__ = 'AnswerSheet'
-    answers = db.Column(String, nullable=False)
+    answers = db.Column(String(250), nullable=False)
     answerID = db.Column(db.Integer, primary_key=True,autoincrement=True)
     userID = db.Column(db.Integer, db.ForeignKey('User.userID'))

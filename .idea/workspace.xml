@@ -4,9 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ee1f72-c9ba-44de-a7da-c7253491b5c9" name="Changes" comment="Refactored the app2.py file by breaking up the logic into different files. Database initialization into DBInit.py, configuration of CORS and DB connection into config.py, The database entities models into models.py, Routes.py to define the API endpoints and the actions taken, services.py defines the logic behind the actions">
-      <change beforePath="$PROJECT_DIR$/backend/DataProcessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DataProcessing.py" afterDir="false" />
+    <list default="true" id="e8ee1f72-c9ba-44de-a7da-c7253491b5c9" name="Changes" comment="Removed some unneccessary print statements">
+      <change afterPath="$PROJECT_DIR$/backend/testDbCreationScript" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/testapp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/testingconfig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/tests/TestAServices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/tests/TestRoutes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/tests/TestTranslations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.coverage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/best_model4.pth" beforeDir="false" afterPath="$PROJECT_DIR$/backend/best_model4.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/test-reports/TEST-TestFlaskApi.TestFlaskAPI-20240312112031.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/test-reports/TEST-TestModelCreation.TestDataPreprocessing-20240310235226.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/test-reports/TEST-TestModelCreation.TestDataPreprocessing-20240312112031.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/test-reports/TEST-TestModelPrediction.TestModelPredictions-20240312112031.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tests/TestFlaskApi.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +78,7 @@
     "Python tests.pytest for TestModelCreation.TestDataPreprocessing.test_scaler.executor": "Run",
     "Python tests.pytest for TestModelPrediction.TestModelPredictions.executor": "Run",
     "Python tests.pytest for TestModelPrediction.TestModelPredictions.test_prediction_shape.executor": "Run",
+    "Python tests.pytest for TestServices.UserTestCase.test_register_user.executor": "Run",
     "Python tests.pytest in TestModelCreation.py.executor": "Run",
     "Python tests.pytest in TestModelPrediction.py.executor": "Run",
     "Python.DataProcessing.executor": "Run",
@@ -91,12 +107,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests" />
+      <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine3\backend" />
       <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine\backend" />
       <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine\backend\tests" />
       <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app2">
+  <component name="RunManager" selected="Python.testRunner">
     <configuration name="app2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MLEngine3" />
       <option name="ENV_FILES" value="" />
@@ -184,7 +202,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in TestModelPrediction.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for backend.tests.TestAServices.UserTestCase.test_register_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="MLEngine3" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -198,24 +216,24 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/backend/tests/TestModelPrediction.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;backend.tests.TestAServices.UserTestCase.test_register_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.testRunner" />
       <item itemvalue="Python.app2" />
+      <item itemvalue="Python tests.pytest for backend.tests.TestAServices.UserTestCase.test_register_user" />
       <item itemvalue="Python tests.pytest for TestModelPrediction.TestModelPredictions" />
-      <item itemvalue="Python tests.pytest in TestModelPrediction.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app2" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.testRunner" />
+        <item itemvalue="Python.app2" />
+        <item itemvalue="Python tests.pytest for backend.tests.TestAServices.UserTestCase.test_register_user" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.pytest for TestModelPrediction.TestModelPredictions" />
-        <item itemvalue="Python tests.pytest in TestModelPrediction.py" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +283,8 @@
       <workItem from="1712325395191" duration="2217000" />
       <workItem from="1712565191314" duration="1261000" />
       <workItem from="1712651310625" duration="4191000" />
-      <workItem from="1712760881358" duration="6428000" />
+      <workItem from="1712760881358" duration="12514000" />
+      <workItem from="1712816089338" duration="5057000" />
     </task>
     <task id="LOCAL−00001" summary="frontend component for questionnaire">
       <option name="closed" value="true" />
@@ -302,7 +321,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1712767148498</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Removed some unneccessary print statements">
+      <option name="closed" value="true" />
+      <created>1712767467395</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1712767467395</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +349,8 @@
     <MESSAGE value="frontend component for questionnaire" />
     <MESSAGE value="some commenting" />
     <MESSAGE value="Refactored the app2.py file by breaking up the logic into different files. Database initialization into DBInit.py, configuration of CORS and DB connection into config.py, The database entities models into models.py, Routes.py to define the API endpoints and the actions taken, services.py defines the logic behind the actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored the app2.py file by breaking up the logic into different files. Database initialization into DBInit.py, configuration of CORS and DB connection into config.py, The database entities models into models.py, Routes.py to define the API endpoints and the actions taken, services.py defines the logic behind the actions" />
+    <MESSAGE value="Removed some unneccessary print statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed some unneccessary print statements" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MLEngine3$pytest_for_TestFlaskApi_TestFlaskAPI_test_predict_endpoint.coverage" NAME="pytest for TestFlaskApi.TestFlaskAPI.test_predict_endpoint Coverage Results" MODIFIED="1710235151372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/tests" />
@@ -333,13 +360,14 @@
     <SUITE FILE_PATH="coverage/MLEngine$DataProcessing.coverage" NAME="DataProcessing Coverage Results" MODIFIED="1709468675306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MLEngine$FlaskServer__1_.coverage" NAME="FlaskServer (1) Coverage Results" MODIFIED="1709470826210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MLEngine$testRunner.coverage" NAME="testRunner Coverage Results" MODIFIED="1709822329711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
-    <SUITE FILE_PATH="coverage/MLEngine3$app2.coverage" NAME="app2 Coverage Results" MODIFIED="1712767327207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/MLEngine3$app2.coverage" NAME="app2 Coverage Results" MODIFIED="1712820561485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine$FlaskServer.coverage" NAME="FlaskServer Coverage Results" MODIFIED="1709821629289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine3$pytest_for_TestModelPrediction_TestModelPredictions_test_prediction_shape.coverage" NAME="pytest for TestModelPrediction.TestModelPredictions.test_prediction_shape Coverage Results" MODIFIED="1710235219262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/tests" />
-    <SUITE FILE_PATH="coverage/MLEngine3$testRunner.coverage" NAME="testRunner Coverage Results" MODIFIED="1712761707677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/MLEngine3$testRunner.coverage" NAME="testRunner Coverage Results" MODIFIED="1712820685833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine3$FlaskServer__1_.coverage" NAME="FlaskServer (1) Coverage Results" MODIFIED="1710234834552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine3$dbconnector.coverage" NAME="dbconnector Coverage Results" MODIFIED="1711283207670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine3$pytest_for_TestModelPrediction_TestModelPredictions.coverage" NAME="pytest for TestModelPrediction.TestModelPredictions Coverage Results" MODIFIED="1712659438730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/tests" />
+    <SUITE FILE_PATH="coverage/MLEngine3$pytest_for_TestServices_UserTestCase_test_register_user.coverage" NAME="pytest for TestServices.UserTestCase.test_register_user Coverage Results" MODIFIED="1712819110062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/tests" />
     <SUITE FILE_PATH="coverage/MLEngine3$FlaskServer2.coverage" NAME="FlaskServer Coverage Results" MODIFIED="1710234851261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine3$pytest_for_TestModelCreation_TestDataPreprocessing_test_label_encoder.coverage" NAME="pytest for TestModelCreation.TestDataPreprocessing.test_label_encoder Coverage Results" MODIFIED="1710235133815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/tests" />
     <SUITE FILE_PATH="coverage/MLEngine3$pytest_for_TestModelCreation_TestDataPreprocessing_test_scaler.coverage" NAME="pytest for TestModelCreation.TestDataPreprocessing.test_scaler Coverage Results" MODIFIED="1710235211028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/tests" />
