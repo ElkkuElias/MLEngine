@@ -1,12 +1,12 @@
 from flask import Flask, jsonify
 from routes import users_blueprint
-from config import Config
+from testingconfig import TestingConfig
 from DBInit import db
 from flask_cors import CORS
 
 
 app = Flask(__name__)
-app.config.from_object(Config)
+app.config.from_object(TestingConfig)
 CORS(app)
 
 app.register_blueprint(users_blueprint)

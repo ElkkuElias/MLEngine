@@ -1,0 +1,30 @@
+CREATE TABLE User
+(
+  userID INT NOT NULL AUTO_INCREMENT,
+  firstName_en VARCHAR(50),
+  lastName_en VARCHAR(50),
+  password VARCHAR(50) NOT NULL,
+  email VARCHAR(200) NOT NULL,
+  firstName_su VARCHAR(50),
+  lastName_su VARCHAR(50),
+  firstName_tel VARCHAR(200),
+  lastName_tel VARCHAR(200),
+  PRIMARY KEY (userID)
+);
+
+CREATE TABLE Degree
+(
+  degreeID INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(150) NOT NULL,
+  userID INT NOT NULL,
+  PRIMARY KEY (degreeID),
+  FOREIGN KEY (userID) REFERENCES User(userID)
+);
+CREATE TABLE AnswerSheet
+(
+  answerID INT NOT NULL AUTO_INCREMENT,
+  answers VARCHAR(500) NOT NULL,
+  userID INT NOT NULL,
+  PRIMARY KEY (answerID),
+  FOREIGN KEY (userID) REFERENCES User(userID)
+);

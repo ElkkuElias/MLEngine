@@ -229,3 +229,9 @@ translations = {
         'tel': 'పబ్లిక్ హెల్త్ నర్స్'
     },
 }
+def translate(term, lang_code='en'):
+
+    if term in translations and lang_code in translations[term]:
+        return translations[term][lang_code]
+    else:
+        return f"Translation for '{term}' in language '{lang_code}' not found."
