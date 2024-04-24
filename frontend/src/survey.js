@@ -8,14 +8,13 @@ import global_su from './translations/su/global.json';
 import global_tel from './translations/tel/global.json';
 import Dropdown from './components/dropdown.js';
 
-
 i18n
   .use(initReactI18next)
   .init({
     resources: {
-      en : { global: global_en },
-      su : { global: global_su },
-      tel : { global: global_tel }
+      en: { global: global_en },
+      su: { global: global_su },
+      tel: { global: global_tel }
     },
     lng: 'en',
     fallbackLng: 'en',
@@ -25,42 +24,44 @@ i18n
   });
 
 const SurveyComponent = () => {
-  const { t } = useTranslation('global'); // Specify the namespace
+  const { t } = useTranslation('global');
   const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem('selectedLanguage') || 'en');
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [answers, setAnswers] = useState({});
+  
   useEffect(() => {
     i18n.changeLanguage(selectedLanguage);
   }, [selectedLanguage]);
+  
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setSelectedLanguage(lng);
-    localStorage.setItem('selectedLanguage', lng); // Update localStorage with the new language
+    localStorage.setItem('selectedLanguage', lng);
   };
   
-
-  const questions = Object.keys(global_en); // Extract question keys from global_en JSON
-
-  const [answers, setAnswers] = useState(Array(questions.length).fill(null));
-
-  const handleAnswer = (questionIndex, answer) => {
-    const newAnswers = [...answers];
-    newAnswers[questionIndex] = answer;
-    setAnswers(newAnswers);
+  
+  const handleAnswer = (answer) => {
+    setAnswers({ ...answers, [currentQuestionIndex]: answer });
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
   };
 
-  const getButtonStyle = (questionIndex, answer) => {
-    return answers[questionIndex] === answer ? { backgroundColor: '#367B35' } : {};
-  };
-  const getFontSize = () => {
-    return selectedLanguage === 'tel' ? '0.8em' : '1em';
+  const handlePreviousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+    }
   };
 
-  const generateDataJSON = () => {
+  const handleSubmit = () => {
     const data = {
-      data: answers,
+      answers: answers,
       userID: sessionStorage.getItem('userID'),
       lang: selectedLanguage
     };
-    console.log(data);
+  
+    console.log('Submitting Answers:', data);
+  
     fetch('http://127.0.0.1:5000/predict', {
       method: 'POST',
       headers: {
@@ -69,30 +70,45 @@ const SurveyComponent = () => {
       body: JSON.stringify(data)
     })
       .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
+      .then(responseData => {
+        console.log('Submission Response:', responseData);
+        // Handle any further processing or UI updates based on the response
       })
       .catch(error => {
-        console.error('Error:', error);
+        console.error('Submission Error:', error);
+        // Handle errors, such as displaying an error message to the user
       });
   };
 
+  const getButtonStyle = (answer) => {
+    return answers[currentQuestionIndex] === answer ? { backgroundColor: '#367B35' } : {};
+  };
+
+  const getFontSize = () => {
+    return selectedLanguage === 'tel' ? '0.8em' : '1em';
+  };
+
+  const questions = Object.keys(global_en);
+
   return (
     <div style={{ fontSize: getFontSize() }}>
-           <Dropdown onLanguageSelect={changeLanguage} />
-      {questions.map((question, index) => (
-        <div key={index}>
-          <p>{t(`global:${question}`)}</p> {/* Translate each question key */}
-          <div>
-            {[1, 2, 3, 4, 5].map((answer) => (
-              <button key={answer} onClick={() => handleAnswer(index, answer)} style={getButtonStyle(index, answer)}>
-                {answer}
-              </button>
-            ))}
-          </div>
+      <Dropdown onLanguageSelect={changeLanguage} />
+      <div key={currentQuestionIndex}>
+        <p>{t(`global:${questions[currentQuestionIndex]}`)}</p>
+        <div>
+          {[1, 2, 3, 4, 5].map((answer) => (
+            <button key={answer} onClick={() => handleAnswer(answer)} style={getButtonStyle(answer)} className="survey-button">
+              {answer}
+            </button>
+          ))}
         </div>
-      ))}
-      <button onClick={generateDataJSON}>{t(`Submit answers`)}</button>
+        {currentQuestionIndex > 0 && (
+          <button onClick={handlePreviousQuestion} className="survey-button">{t('Back')}</button>
+        )}
+        {currentQuestionIndex === questions.length - 1 && (
+          <button onClick={handleSubmit} className="survey-button">{t('Submit answers')}</button>
+        )}
+      </div>
     </div>
   );
 };
