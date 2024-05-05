@@ -19,7 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    dir('frontend') {  // Ensure this is also within the 'frontend' directory
+                    dir('src') {  // Ensure this is also within the 'frontend' directory
                         bat 'npm test'
                     }
                 }
