@@ -9,7 +9,7 @@ pipeline {
         stage('Install') {
             steps {
                 script {
-                    
+                    bat 'dir'
                     bat 'npm install'
                 }
             }
