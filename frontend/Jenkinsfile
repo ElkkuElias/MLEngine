@@ -9,8 +9,9 @@ pipeline {
         stage('Install') {
             steps {
                 script {
-                    bat 'dir'
+                   dir('frontend') { 
                     bat 'npm install'
+                
                 }
             }
         }
