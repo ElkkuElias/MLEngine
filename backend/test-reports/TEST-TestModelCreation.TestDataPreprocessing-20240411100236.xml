@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<testsuite name="TestModelCreation.TestDataPreprocessing-20240411100236" tests="3" time="0.001" failures="0" errors="0">
-	<testcase classname="TestModelCreation.TestDataPreprocessing" name="test_label_encoder" time="0.000"/>
-	<testcase classname="TestModelCreation.TestDataPreprocessing" name="test_scaler" time="0.001"/>
-	<testcase classname="TestModelCreation.TestDataPreprocessing" name="test_tensor_conversion" time="0.000"/>
-	<system-out><![CDATA[]]></system-out>
-	<system-err><![CDATA[]]></system-err>
-</testsuite>
