@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs "node"  // Ensure this label matches the NodeJS configuration in Jenkins
+    }
+
+    stages {
+        stage('Install') {
+            steps {
+                script {
+                    dir('frontend') {  // Change to the directory containing package.json
+                        bat 'npm install'
+                    }
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                script {
+                    dir('frontend') {  // Ensure this is also within the 'frontend' directory
+                        bat 'npm test'
+                    }
+                }
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    dir('frontend') {  // Similarly, ensure build is executed in the 'frontend' directory
+                        bat "set CI=false && npm run build"
+                    }
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                script {
+                    // Add deployment commands or scripts here
+                    echo 'Deploying...'
+                }
+            }
+        }
+    }
+}
