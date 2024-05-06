@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<testsuite name="unittest.loader._FailedTest-20240411100204" tests="3" time="0.000" failures="0" errors="3">
+	<testcase classname="unittest.loader._FailedTest" name="TestModelPrediction" time="0.000">
+		<error type="ImportError" message="Failed to import test module: TestModelPrediction
+Traceback (most recent call last):
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 362, in _get_module_from_name
+    __import__(name)
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestModelPrediction.py&quot;, line 6, in &lt;module&gt;
+    from DataProcessing import QuestionnaireNN, y
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\DataProcessing.py&quot;, line 1, in &lt;module&gt;
+    import pandas as pd
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\__init__.py&quot;, line 62, in &lt;module&gt;
+    from pandas.core.api import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\api.py&quot;, line 47, in &lt;module&gt;
+    from pandas.core.groupby import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\groupby\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pandas.core.groupby.generic import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\groupby\generic.py&quot;, line 68, in &lt;module&gt;
+    from pandas.core.frame import DataFrame
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\frame.py&quot;, line 149, in &lt;module&gt;
+    from pandas.core.generic import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\generic.py&quot;, line 152, in &lt;module&gt;
+    from pandas.core import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\indexing.py&quot;, line 79, in &lt;module&gt;
+    from pandas.core.indexes.api import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\indexes\api.py&quot;, line 20, in &lt;module&gt;
+    from pandas.core.indexes.base import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\indexes\base.py&quot;, line 151, in &lt;module&gt;
+    from pandas.core.array_algos.putmask import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\array_algos\putmask.py&quot;, line 0, in &lt;module&gt;
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\control.py&quot;, line 394, in _should_trace
+    disp = self._inorout.should_trace(filename, frame)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\inorout.py&quot;, line 347, in should_trace
+    canonical = canonical_filename(filename)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\files.py&quot;, line 85, in canonical_filename
+    cf = abs_file(cf)
+         ^^^^^^^^^^^^
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\files.py&quot;, line 156, in abs_file
+    return actual_path(os.path.abspath(os.path.realpath(path)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\files.py&quot;, line 139, in actual_path
+    normtail = os.path.normcase(tail)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;&lt;frozen ntpath&gt;&quot;, line 51, in normcase
+KeyboardInterrupt
+"><![CDATA[ImportError: Failed to import test module: TestModelPrediction
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestModelPrediction.py", line 6, in <module>
+    from DataProcessing import QuestionnaireNN, y
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\DataProcessing.py", line 1, in <module>
+    import pandas as pd
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\__init__.py", line 62, in <module>
+    from pandas.core.api import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\api.py", line 47, in <module>
+    from pandas.core.groupby import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\groupby\__init__.py", line 1, in <module>
+    from pandas.core.groupby.generic import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\groupby\generic.py", line 68, in <module>
+    from pandas.core.frame import DataFrame
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\frame.py", line 149, in <module>
+    from pandas.core.generic import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\generic.py", line 152, in <module>
+    from pandas.core import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\indexing.py", line 79, in <module>
+    from pandas.core.indexes.api import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\indexes\api.py", line 20, in <module>
+    from pandas.core.indexes.base import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 151, in <module>
+    from pandas.core.array_algos.putmask import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\core\array_algos\putmask.py", line 0, in <module>
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\control.py", line 394, in _should_trace
+    disp = self._inorout.should_trace(filename, frame)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\inorout.py", line 347, in should_trace
+    canonical = canonical_filename(filename)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\files.py", line 85, in canonical_filename
+    cf = abs_file(cf)
+         ^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\files.py", line 156, in abs_file
+    return actual_path(os.path.abspath(os.path.realpath(path)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\coverage\files.py", line 139, in actual_path
+    normtail = os.path.normcase(tail)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 51, in normcase
+KeyboardInterrupt
+
+]]></error>
+	</testcase>
+	<testcase classname="unittest.loader._FailedTest" name="TestRoutes" time="0.000">
+		<error type="ImportError" message="Failed to import test module: TestRoutes
+Traceback (most recent call last):
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 362, in _get_module_from_name
+    __import__(name)
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestRoutes.py&quot;, line 6, in &lt;module&gt;
+    from testapp import app
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\testapp.py&quot;, line 2, in &lt;module&gt;
+    from routes import users_blueprint
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\routes.py&quot;, line 2, in &lt;module&gt;
+    from services import login_user, register_user, predict, save
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py&quot;, line 2, in &lt;module&gt;
+    from DataProcessing import QuestionnaireNN, scaler, le
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\DataProcessing.py&quot;, line 1, in &lt;module&gt;
+    import pandas as pd
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\__init__.py&quot;, line 151, in &lt;module&gt;
+    from pandas import api, arrays, errors, io, plotting, tseries
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\api\__init__.py&quot;, line 2, in &lt;module&gt;
+    from pandas.api import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\api\typing\__init__.py&quot;, line 31, in &lt;module&gt;
+    from pandas.io.json._json import JsonReader
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\json\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pandas.io.json._json import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\json\_json.py&quot;, line 71, in &lt;module&gt;
+    from pandas.io.parsers.readers import validate_integer
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\parsers\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pandas.io.parsers.readers import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\parsers\readers.py&quot;, line 32, in &lt;module&gt;
+    from pandas._libs.parsers import STR_NA_VALUES
+  File &quot;parsers.pyx&quot;, line 1418, in init pandas._libs.parsers
+AttributeError: partially initialized module 'pandas' has no attribute '_pandas_parser_CAPI' (most likely due to a circular import)
+"><![CDATA[ImportError: Failed to import test module: TestRoutes
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestRoutes.py", line 6, in <module>
+    from testapp import app
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\testapp.py", line 2, in <module>
+    from routes import users_blueprint
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\routes.py", line 2, in <module>
+    from services import login_user, register_user, predict, save
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py", line 2, in <module>
+    from DataProcessing import QuestionnaireNN, scaler, le
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\DataProcessing.py", line 1, in <module>
+    import pandas as pd
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\__init__.py", line 151, in <module>
+    from pandas import api, arrays, errors, io, plotting, tseries
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\api\__init__.py", line 2, in <module>
+    from pandas.api import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\api\typing\__init__.py", line 31, in <module>
+    from pandas.io.json._json import JsonReader
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\json\__init__.py", line 1, in <module>
+    from pandas.io.json._json import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\json\_json.py", line 71, in <module>
+    from pandas.io.parsers.readers import validate_integer
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\parsers\__init__.py", line 1, in <module>
+    from pandas.io.parsers.readers import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 32, in <module>
+    from pandas._libs.parsers import STR_NA_VALUES
+  File "parsers.pyx", line 1418, in init pandas._libs.parsers
+AttributeError: partially initialized module 'pandas' has no attribute '_pandas_parser_CAPI' (most likely due to a circular import)
+
+]]></error>
+	</testcase>
+	<testcase classname="unittest.loader._FailedTest" name="TestServices" time="0.000">
+		<error type="ImportError" message="Failed to import test module: TestServices
+Traceback (most recent call last):
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 362, in _get_module_from_name
+    __import__(name)
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestServices.py&quot;, line 5, in &lt;module&gt;
+    from services import register_user
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py&quot;, line 2, in &lt;module&gt;
+    from DataProcessing import QuestionnaireNN, scaler, le
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\DataProcessing.py&quot;, line 1, in &lt;module&gt;
+    import pandas as pd
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\__init__.py&quot;, line 151, in &lt;module&gt;
+    from pandas import api, arrays, errors, io, plotting, tseries
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\api\__init__.py&quot;, line 2, in &lt;module&gt;
+    from pandas.api import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\api\typing\__init__.py&quot;, line 31, in &lt;module&gt;
+    from pandas.io.json._json import JsonReader
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\json\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pandas.io.json._json import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\json\_json.py&quot;, line 71, in &lt;module&gt;
+    from pandas.io.parsers.readers import validate_integer
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\parsers\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pandas.io.parsers.readers import (
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\parsers\readers.py&quot;, line 32, in &lt;module&gt;
+    from pandas._libs.parsers import STR_NA_VALUES
+  File &quot;parsers.pyx&quot;, line 1418, in init pandas._libs.parsers
+AttributeError: partially initialized module 'pandas' has no attribute '_pandas_parser_CAPI' (most likely due to a circular import)
+"><![CDATA[ImportError: Failed to import test module: TestServices
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestServices.py", line 5, in <module>
+    from services import register_user
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py", line 2, in <module>
+    from DataProcessing import QuestionnaireNN, scaler, le
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\DataProcessing.py", line 1, in <module>
+    import pandas as pd
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\__init__.py", line 151, in <module>
+    from pandas import api, arrays, errors, io, plotting, tseries
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\api\__init__.py", line 2, in <module>
+    from pandas.api import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\api\typing\__init__.py", line 31, in <module>
+    from pandas.io.json._json import JsonReader
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\json\__init__.py", line 1, in <module>
+    from pandas.io.json._json import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\json\_json.py", line 71, in <module>
+    from pandas.io.parsers.readers import validate_integer
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\parsers\__init__.py", line 1, in <module>
+    from pandas.io.parsers.readers import (
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 32, in <module>
+    from pandas._libs.parsers import STR_NA_VALUES
+  File "parsers.pyx", line 1418, in init pandas._libs.parsers
+AttributeError: partially initialized module 'pandas' has no attribute '_pandas_parser_CAPI' (most likely due to a circular import)
+
+]]></error>
+	</testcase>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

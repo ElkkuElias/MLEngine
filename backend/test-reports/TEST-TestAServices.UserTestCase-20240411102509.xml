@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<testsuite name="TestAServices.UserTestCase-20240411102509" tests="5" time="0.052" failures="0" errors="1">
+	<testcase classname="TestAServices.UserTestCase" name="test_login_user" time="0.033"/>
+	<testcase classname="TestAServices.UserTestCase" name="test_login_user_fail" time="0.002"/>
+	<testcase classname="TestAServices.UserTestCase" name="test_register_user" time="0.011"/>
+	<testcase classname="TestAServices.UserTestCase" name="test_saving" time="0.005"/>
+	<testcase classname="TestAServices.UserTestCase" name="test_prediction" time="0.001">
+		<error type="KeyError" message="'suffix'"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestAServices.py", line 73, in test_prediction
+    response = register_user(user_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py", line 12, in register_user
+    if (user_data['suffix'] == 'su'):
+        ~~~~~~~~~^^^^^^^^^^
+KeyError: 'suffix'
+]]></error>
+	</testcase>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

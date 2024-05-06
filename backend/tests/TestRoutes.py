@@ -15,7 +15,7 @@ class TestUsersBlueprint(TestCase):
 
     @patch('services.register_user')
     def test_register(self,mock_register):
-        mock_register.return_value = {'message': 'User registered successfully', 'userID': 1}
+        mock_register.return_value = {'messageT': 'User registered successfully', 'userID': 1}
         response = self.client.post('/register', json={'firstName_tel': 'tester', 'lastName_tel': 'man','email':'mate@email.com', 'password': 'testpass','suffix':'tel','userID':1})
         self.assertEqual(response.status_code, 201)
         mock_register.asser_called_once()

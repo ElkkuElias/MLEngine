@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<testsuite name="TestModelCreation.TestDataPreprocessing-20240411092214" tests="3" time="0.002" failures="0" errors="0">
+	<testcase classname="TestModelCreation.TestDataPreprocessing" name="test_label_encoder" time="0.001"/>
+	<testcase classname="TestModelCreation.TestDataPreprocessing" name="test_scaler" time="0.001"/>
+	<testcase classname="TestModelCreation.TestDataPreprocessing" name="test_tensor_conversion" time="0.000"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[[2024-04-11 09:22:14,344] ERROR in app: Exception on /register [POST]
+Traceback (most recent call last):
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+MySQLdb.IntegrityError: (1062, "Duplicate entry 'mate@email.com' for key 'email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\routes.py", line 9, in register
+    new_user = register_user(user_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py", line 39, in register_user
+    db.session.commit()
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1972, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1257, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1232, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4296, in flush
+    self._flush(objects)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4431, in _flush
+    with util.safe_reraise():
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4392, in _flush
+    flush_context.execute()
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1422, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 514, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1644, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1850, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1990, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2357, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1971, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 919, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\MySQLdb\connections.py", line 261, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.IntegrityError: (MySQLdb.IntegrityError) (1062, "Duplicate entry 'mate@email.com' for key 'email'")
+[SQL: INSERT INTO `User` (`firstName_en`, `lastName_en`, `firstName_su`, `lastName_su`, `firstName_tel`, `lastName_tel`, email, password) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: (None, None, None, None, 'tester', 'man', 'mate@email.com', 'testpass')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+]]></system-err>
+</testsuite>

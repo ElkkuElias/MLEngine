@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<testsuite name="unittest.loader._FailedTest-20240410222030" tests="3" time="0.001" failures="0" errors="3">
+	<testcase classname="unittest.loader._FailedTest" name="TestModelCreation" time="0.000">
+		<error type="ImportError" message="Failed to import test module: TestModelCreation
+Traceback (most recent call last):
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 362, in _get_module_from_name
+    __import__(name)
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestModelCreation.py&quot;, line 3, in &lt;module&gt;
+    import torch
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\__init__.py&quot;, line 1549, in &lt;module&gt;
+    import torch.nn.intrinsic
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\nn\intrinsic\__init__.py&quot;, line 19, in &lt;module&gt;
+    from . import quantized  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\nn\intrinsic\quantized\__init__.py&quot;, line 1, in &lt;module&gt;
+    from .modules import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\nn\intrinsic\quantized\modules\__init__.py&quot;, line 1, in &lt;module&gt;
+    from .linear_relu import LinearReLU
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\nn\intrinsic\quantized\modules\linear_relu.py&quot;, line 1, in &lt;module&gt;
+    from torch.ao.nn.intrinsic.quantized import LinearReLU
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\ao\nn\intrinsic\quantized\__init__.py&quot;, line 1, in &lt;module&gt;
+    from .modules import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\ao\nn\intrinsic\quantized\modules\__init__.py&quot;, line 3, in &lt;module&gt;
+    from .bn_relu import BNReLU2d, BNReLU3d
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1176, in _find_and_load
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 1147, in _find_and_load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 676, in _load_unlocked
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 579, in module_from_spec
+  File &quot;&lt;frozen importlib._bootstrap&gt;&quot;, line 551, in _init_module_attrs
+KeyboardInterrupt
+"><![CDATA[ImportError: Failed to import test module: TestModelCreation
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestModelCreation.py", line 3, in <module>
+    import torch
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\__init__.py", line 1549, in <module>
+    import torch.nn.intrinsic
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\nn\intrinsic\__init__.py", line 19, in <module>
+    from . import quantized  # noqa: F401
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\nn\intrinsic\quantized\__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\nn\intrinsic\quantized\modules\__init__.py", line 1, in <module>
+    from .linear_relu import LinearReLU
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\nn\intrinsic\quantized\modules\linear_relu.py", line 1, in <module>
+    from torch.ao.nn.intrinsic.quantized import LinearReLU
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\ao\nn\intrinsic\quantized\__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\ao\nn\intrinsic\quantized\modules\__init__.py", line 3, in <module>
+    from .bn_relu import BNReLU2d, BNReLU3d
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 676, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 579, in module_from_spec
+  File "<frozen importlib._bootstrap>", line 551, in _init_module_attrs
+KeyboardInterrupt
+
+]]></error>
+	</testcase>
+	<testcase classname="unittest.loader._FailedTest" name="TestModelPrediction" time="0.001">
+		<error type="ImportError" message="Failed to import test module: TestModelPrediction
+Traceback (most recent call last):
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 362, in _get_module_from_name
+    __import__(name)
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestModelPrediction.py&quot;, line 4, in &lt;module&gt;
+    import torch
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\__init__.py&quot;, line 533, in &lt;module&gt;
+    for name in dir(_C):
+                    ^^
+NameError: name '_C' is not defined
+"><![CDATA[ImportError: Failed to import test module: TestModelPrediction
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestModelPrediction.py", line 4, in <module>
+    import torch
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\__init__.py", line 533, in <module>
+    for name in dir(_C):
+                    ^^
+NameError: name '_C' is not defined
+
+]]></error>
+	</testcase>
+	<testcase classname="unittest.loader._FailedTest" name="TestRoutes" time="0.000">
+		<error type="ImportError" message="Failed to import test module: TestRoutes
+Traceback (most recent call last):
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py&quot;, line 362, in _get_module_from_name
+    __import__(name)
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestRoutes.py&quot;, line 6, in &lt;module&gt;
+    from routes import users_blueprint
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\routes.py&quot;, line 2, in &lt;module&gt;
+    from services import login_user, register_user, predict, save
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py&quot;, line 2, in &lt;module&gt;
+    from DataProcessing import QuestionnaireNN, scaler, le
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\DataProcessing.py&quot;, line 4, in &lt;module&gt;
+    import torch
+  File &quot;C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\__init__.py&quot;, line 533, in &lt;module&gt;
+    for name in dir(_C):
+                    ^^
+NameError: name '_C' is not defined
+"><![CDATA[ImportError: Failed to import test module: TestRoutes
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\tests\TestRoutes.py", line 6, in <module>
+    from routes import users_blueprint
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\routes.py", line 2, in <module>
+    from services import login_user, register_user, predict, save
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py", line 2, in <module>
+    from DataProcessing import QuestionnaireNN, scaler, le
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\DataProcessing.py", line 4, in <module>
+    import torch
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\torch\__init__.py", line 533, in <module>
+    for name in dir(_C):
+                    ^^
+NameError: name '_C' is not defined
+
+]]></error>
+	</testcase>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

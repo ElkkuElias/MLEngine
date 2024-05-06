@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<testsuite name="TestAServices.UserTestCase-20240426134646" tests="5" time="0.074" failures="0" errors="0">
+	<testcase classname="TestAServices.UserTestCase" name="test_login_user" time="0.041"/>
+	<testcase classname="TestAServices.UserTestCase" name="test_login_user_fail" time="0.001"/>
+	<testcase classname="TestAServices.UserTestCase" name="test_prediction" time="0.023"/>
+	<testcase classname="TestAServices.UserTestCase" name="test_register_user" time="0.007"/>
+	<testcase classname="TestAServices.UserTestCase" name="test_saving" time="0.002"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<testsuite name="TestRoutes.TestUsersBlueprint-20240410222427" tests="4" time="0.034" failures="0" errors="0">
+	<testcase classname="TestRoutes.TestUsersBlueprint" name="test_login" time="0.026"/>
+	<testcase classname="TestRoutes.TestUsersBlueprint" name="test_login_fail" time="0.002"/>
+	<testcase classname="TestRoutes.TestUsersBlueprint" name="test_prediction" time="0.004"/>
+	<testcase classname="TestRoutes.TestUsersBlueprint" name="test_save" time="0.002"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

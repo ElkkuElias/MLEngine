@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<testsuite name="TestTranslations.TestTranslations-20240410222404" tests="4" time="0.000" failures="0" errors="0">
+	<testcase classname="TestTranslations.TestTranslations" name="test_translate_english" time="0.000"/>
+	<testcase classname="TestTranslations.TestTranslations" name="test_translate_finnish" time="0.000"/>
+	<testcase classname="TestTranslations.TestTranslations" name="test_translate_not_found" time="0.000"/>
+	<testcase classname="TestTranslations.TestTranslations" name="test_translate_telugu" time="0.000"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[[2024-04-10 22:24:04,802] ERROR in app: Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\routes.py", line 24, in prediction
+    user_prediction = predict(user_data)
+                      ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py", line 73, in predict
+    input_data_scaled = scaler.transform([data])  # Scale the input data
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sklearn\utils\validation.py", line 997, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\sklearn\utils\_array_api.py", line 521, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'test'
+[2024-04-10 22:24:04,822] ERROR in app: Exception on /save [POST]
+Traceback (most recent call last):
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\.venv\Lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\routes.py", line 29, in persist
+    save_user = save(user_data)
+                ^^^^^^^^^^^^^^^
+  File "C:\Users\Omistaja\PycharmProjects\MLEngine3\backend\services.py", line 112, in save
+    userID=user_data['userID']
+           ~~~~~~~~~^^^^^^^^^^
+KeyError: 'userID'
+]]></system-err>
+</testsuite>

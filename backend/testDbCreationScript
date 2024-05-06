@@ -28,3 +28,6 @@ CREATE TABLE AnswerSheet
   PRIMARY KEY (answerID),
   FOREIGN KEY (userID) REFERENCES User(userID)
 );
+INSERT INTO User (firstName_en, lastName_en, email, password)
+VALUES ('John', 'Doe', 'john.doe@example.com', 'password123');
+
