@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
-import Login from "../../components/Login";
+import Login from "../components/Login";
 
 // Mocking modules and hooks
 jest.mock("react-router-dom", () => ({

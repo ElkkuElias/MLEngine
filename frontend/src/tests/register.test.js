@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import RegistrationForm from "../../components/register.js";
+import RegistrationForm from "../components/register.js";
 
 describe("Register Component", () => {
   beforeEach(() => {

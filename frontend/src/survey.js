@@ -54,8 +54,12 @@ const SurveyComponent = () => {
   };
 
   const handleSubmit = () => {
+    const answersArray = [];
+    Object.keys(answers).sort().forEach(key => {
+      answersArray.push(answers[key]);
+    });
     const data = {
-      answers: answers,
+      data: answersArray,
       userID: sessionStorage.getItem('userID'),
       lang: selectedLanguage
     };

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8ee1f72-c9ba-44de-a7da-c7253491b5c9" name="Changes" comment="A few testcases">
-      <change beforePath="$PROJECT_DIR$/backend/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/testingconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/testingconfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/best_model4.pth" beforeDir="false" afterPath="$PROJECT_DIR$/backend/best_model4.pth" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +99,7 @@
       <recent name="C:\Users\Omistaja\PycharmProjects\MLEngine" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.testRunner">
+  <component name="RunManager" selected="Python.app2">
     <configuration name="app2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MLEngine3" />
       <option name="ENV_FILES" value="" />
@@ -214,8 +214,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testRunner" />
         <item itemvalue="Python.app2" />
+        <item itemvalue="Python.testRunner" />
         <item itemvalue="Python.dbconnector" />
         <item itemvalue="Python tests.pytest for TestModelPrediction.TestModelPredictions.test_prediction_shape" />
         <item itemvalue="Python tests.pytest for TestModelCreation.TestDataPreprocessing.test_scaler" />
@@ -275,7 +275,7 @@
       <workItem from="1713633564555" duration="6000" />
       <workItem from="1713854087277" duration="591000" />
       <workItem from="1713870577681" duration="589000" />
-      <workItem from="1715008792226" duration="45000" />
+      <workItem from="1715008792226" duration="1995000" />
     </task>
     <task id="LOCAL−00001" summary="frontend component for questionnaire">
       <option name="closed" value="true" />
@@ -326,7 +326,14 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1712821203999</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="A few testcases">
+      <option name="closed" value="true" />
+      <created>1715009050451</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1715009050451</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,10 +366,10 @@
     <SUITE FILE_PATH="coverage/MLEngine$DataProcessing.coverage" NAME="DataProcessing Coverage Results" MODIFIED="1709468675306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MLEngine$FlaskServer__1_.coverage" NAME="FlaskServer (1) Coverage Results" MODIFIED="1709470826210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MLEngine$testRunner.coverage" NAME="testRunner Coverage Results" MODIFIED="1709822329711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
-    <SUITE FILE_PATH="coverage/MLEngine3$app2.coverage" NAME="app2 Coverage Results" MODIFIED="1712821809982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/MLEngine3$app2.coverage" NAME="app2 Coverage Results" MODIFIED="1715016466262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine$FlaskServer.coverage" NAME="FlaskServer Coverage Results" MODIFIED="1709821629289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine3$pytest_for_TestModelPrediction_TestModelPredictions_test_prediction_shape.coverage" NAME="pytest for TestModelPrediction.TestModelPredictions.test_prediction_shape Coverage Results" MODIFIED="1710235219262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/tests" />
-    <SUITE FILE_PATH="coverage/MLEngine3$testRunner.coverage" NAME="testRunner Coverage Results" MODIFIED="1712821820748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/MLEngine3$testRunner.coverage" NAME="testRunner Coverage Results" MODIFIED="1715016324600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine3$FlaskServer__1_.coverage" NAME="FlaskServer (1) Coverage Results" MODIFIED="1710234834552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine3$dbconnector.coverage" NAME="dbconnector Coverage Results" MODIFIED="1712821646373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
     <SUITE FILE_PATH="coverage/MLEngine3$pytest_for_TestModelPrediction_TestModelPredictions.coverage" NAME="pytest for TestModelPrediction.TestModelPredictions Coverage Results" MODIFIED="1712659438730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/tests" />

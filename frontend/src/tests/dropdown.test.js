@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-import Dropdown from "../../components/dropdown";
+import Dropdown from "../components/dropdown";
 
 describe("Dropdown Component", () => {
   const mockOnLanguageSelect = jest.fn();
