@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8ee1f72-c9ba-44de-a7da-c7253491b5c9" name="Changes" comment="A few testcases">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/best_model4.pth" beforeDir="false" afterPath="$PROJECT_DIR$/backend/best_model4.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/testingconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/testingconfig.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,6 +275,7 @@
       <workItem from="1713633564555" duration="6000" />
       <workItem from="1713854087277" duration="591000" />
       <workItem from="1713870577681" duration="589000" />
+      <workItem from="1715008792226" duration="45000" />
     </task>
     <task id="LOCAL−00001" summary="frontend component for questionnaire">
       <option name="closed" value="true" />
