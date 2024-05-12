@@ -45,6 +45,8 @@ Welcome to the Study Path Recommender application! This comprehensive guide will
 - Execute `pip install -r requirements.txt` to install necessary dependencies.
 
 **Running the Flask Server:**
+-Add Database URI to `config.py`, use the `DBcreationScript.txt` for it.
+-For the testing database use the corresponding `testingconfig.py` and `testDbCreationScript`
 - Start the Flask server by running: `python app.py`
 - Your server should now be up and running locally.
 
